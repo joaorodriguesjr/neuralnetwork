@@ -10,6 +10,9 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageReporters": ["json"],
+    "modulePathIgnorePatterns": ["out"]
   }
 }
