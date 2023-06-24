@@ -26,12 +26,10 @@ export class Neuron {
   }
 
   public calculateHiddenGradient(index: number, subsequentLayer: Neuron[]): void {
-    // Compute the weighted sum of gradients from the subsequent layer
     const weightedSumOfGradients = subsequentLayer.reduce((sum, neuron) => {
       return sum + neuron.weights[index] * neuron.gradient;
     }, 0)
 
-    // Compute the gradient for the current neuron in the hidden layer
     this.gradient = this.activationDerivative(this.output) * weightedSumOfGradients
   }
 
