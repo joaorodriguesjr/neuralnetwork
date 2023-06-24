@@ -12,15 +12,6 @@ iterate(100000, () => {
   network.train([1, 1], [0], 0.1)
 })
 
-iterate(0, () => {
-})
-
-iterate(0, () => {
-})
-
-iterate(0, () => {
-})
-
 console.log(
   Math.round(network.predict([0, 0])[0]),
   Math.round(network.predict([1, 1])[0]),
