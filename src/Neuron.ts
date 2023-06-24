@@ -10,10 +10,12 @@ export class Neuron {
   public constructor(public weights: number[], public bias: number) {}
 
   public activate(inputs: number[]): number {
-    this.inputs = inputs
     let weightedSum = inputs.reduce((total, input, index) => total + input * this.weights[index], this.bias)
 
-    return this.output = this.activation(weightedSum)
+    this.inputs = inputs
+    this.output = this.activation(weightedSum)
+
+    return this.output
   }
 
   public updateWeights(learningRate: number): void {
