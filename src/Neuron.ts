@@ -32,7 +32,7 @@ export class Neuron {
     }, 0)
 
     // Compute the gradient for the current neuron in the hidden layer
-    this.gradient = this.output * (1 - this.output) * weightedSumOfGradients
+    this.gradient = this.activationDerivative(this.output) * weightedSumOfGradients
   }
 
   private activation(x: number): number {
