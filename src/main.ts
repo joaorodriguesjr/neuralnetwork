@@ -7,9 +7,9 @@ const network = Network.create([
 
 iterate(100000, () => {
   network.train([0, 0], [0], 0.1)
+  network.train([1, 1], [0], 0.1)
   network.train([0, 1], [1], 0.1)
   network.train([1, 0], [1], 0.1)
-  network.train([1, 1], [0], 0.1)
 })
 
 console.log(
