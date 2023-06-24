@@ -1,9 +1,9 @@
 import { iterate } from './helpers'
 
 export class Neuron {
-  public inputs: number[]
-
   public output: number
+
+  public inputs: number[]
 
   public gradient: number
 
