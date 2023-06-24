@@ -20,7 +20,7 @@ export class Neuron {
 
   public updateWeights(learningRate: number): void {
     this.weights = this.weights.map((weight, index) => weight - this.inputs[index] * learningRate * this.gradient)
-    this.bias = this.bias - learningRate * this.gradient
+    this.bias -= this.gradient * learningRate
   }
 
   public calculateOutputGradient(target: number): void {
