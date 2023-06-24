@@ -67,4 +67,15 @@ describe('Neuron', () => {
       expect(neuron.gradient).toBeCloseTo(expectedGradient)
     })
   })
+
+  describe('create', () => {
+    it('should create a neuron instance with random weights and bias', () => {
+      const inputsCount = 3
+      const neuron = Neuron.create(inputsCount)
+
+      expect(neuron.weights).toHaveLength(inputsCount)
+      expect(neuron.bias).toBeLessThanOrEqual(1)
+      expect(neuron.bias).toBeGreaterThanOrEqual(-1)
+    })
+  })
 })
